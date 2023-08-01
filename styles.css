@@ -1,0 +1,234 @@
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* DEBUG */
+/* * {
+    border: 1px solid black;
+} */
+
+/* DEFAULT SETUP */
+:root {
+    --DarkBlue-color: hsl(240, 38%, 20%);
+    --Grayish-Blue-color: hsl(240, 18%, 77%);
+}
+
+* {
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: var(--DarkBlue-color);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    height: 80%;
+    /* FIX MIN WIDTH */
+    min-width: 1141px;
+}
+.card {
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relatvie;
+}
+
+aside {
+    margin-left: 50px;
+    padding:0;
+    width: 56%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: 15% 20%;
+    background-position: top 20px left 95px;
+    z-index: 1;
+}
+.card aside .name {
+    margin-top: 40px;
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+.card aside .name span {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: var(--Grayish-Blue-color);
+}
+
+
+figure {
+    margin: 0;
+    padding:0;
+    width: 40%;
+    height: 55%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(./images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 130px;
+}
+
+figure img {
+    margin-left: 45px;
+    width: 75%;
+    height: 80%;
+    box-shadow: -5px -8px 20px 0px var(--Grayish-Blue-color);
+}
+
+/* CONTROL BUTTON */
+figure .control {
+    width: 100px;
+    height: 41px;
+    border-radius: 20px;
+    background-color: #eee;
+    position: absolute;
+    top: 86%;
+    left: 13%;
+}
+
+figure .control span {
+    margin-top: 3px;
+    margin-left: 10px;
+    width: 30%;
+    height: 80%;
+    display: inline-block;
+}
+
+figure .control span[id="prev"] {
+    background-image: url(./images/icon-prev.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: .3;
+}
+
+figure .control span[id="next"] {
+    background-image: url(./images/icon-next.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+}
+
+
+/* CREDITS */
+.attribution { margin-top: 20px; font-size: 0.8em; text-align: center; }
+.attribution a { font-size: 0.8em; color: hsl(228, 45%, 44%); }
+
+
+
+
+/* Responsive on mobile */
+@media (max-width: 1100px) {
+    body {
+        margin-top: 0px;
+        background-position: top 90vh left 0;
+    }
+
+    section {
+        margin: 0;
+        padding: 0;
+        width: 80%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+         /* FIX MIN / MAX WIDTH */
+        min-width: 500px;
+        max-width: 500px;
+    }
+    .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+
+    aside {
+        margin: 0;
+        padding:0;
+        width: 90%;
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url(./images/pattern-quotes.svg);
+        background-repeat: no-repeat;
+        background-size: 15% 20%;
+        background-position: top 5% left 50%;
+    }
+
+    .card aside .testimonials {
+        font-size: 0.7em;
+        text-align: center;
+    }
+    .card aside .name {
+        margin-top: 20px;
+        font-size: 0.5em;
+        text-align: center;
+    }
+    .card aside .name span{
+        display: block;
+    }
+
+    figure {
+        margin: 0;
+        padding:0;
+        width: 80%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(./images/pattern-bg.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    figure img {
+        margin: 0;
+        width: 80%;
+        height: 70%;
+        box-shadow: -5px -8px 20px 0px var(--Grayish-Blue-color);
+    }
+    /* CONTROL BUTTON */
+    figure .control {
+        position: absolute ;
+        top: 81%;
+        left: 36%;
+    }
+
+
+
+
+
+    .attribution { margin-top: 5px; font-size: 0.5em; text-align: center; }
+    .attribution a { font-size: 0.5em; color: hsl(228, 45%, 44%); }
+
+}
